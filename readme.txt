@@ -6,16 +6,16 @@ Author URI: http://github.com/osadi/
 Author: Oskar Adin
 Tags: instagram, simple, widget
 Requires at least: 3.0.1
-Tested up to: 4.1
-Stable tag: 0.1
+Tested up to: 4.3
+Stable tag: 0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Just want your Instagram data to play with? Here it is. (Well, at least the 20 latest pictures)
+Just want your Instagram data? Here it is. (Well, at least the 24 latest pictures)
 
 == Description ==
 
-This plugin will fetch the latest 20 pictures, with all available associated data, and leave it for you to play with.
+This plugin will fetch the latest 24 pictures, with all available associated data, and leave it for you to play with.
 It makes no design decisions and tries to stay out of your way as much as possible.
 
 That means that you have to be comfortable with writing your own template to display and style the data.
@@ -33,6 +33,8 @@ The data is fetched from your Instagram page (http://instagram.com/[username]), 
 1. Add it to a widget area and set your username
 
 == Changelog ==
+= 0.2 =
+Fix to capture data from the latest Instagram web page update.
 
 = 0.1 =
 This is the first version.

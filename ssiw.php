@@ -2,8 +2,8 @@
 /*
 Plugin Name: Super Simple Instagram Widget
 Plugin URI: http://github.com/osadi/super-simple-instagram-widget
-Version: 0.1
-Description: Just want your Instagram data to play with? Here it is. (Well, at least the 20 latest pictures)
+Version: 0.2
+Description: Just want your Instagram data to play with? Here it is. (Well, at least the 24 latest pictures)
 Author: osadi
 Author URI: http://github.com/osadi
 License: GPLv2 or later
@@ -14,7 +14,7 @@ class SuperSimpleInstagramWidget extends WP_Widget {
     const HTTP_TIMEOUT = 60;
 
     public $template_name = 'ssiw-template.php';
-    public $instagram_url = 'http://instagram.com/';
+    public $instagram_url = 'https://instagram.com/';
 
     function __construct() {
         // Instantiate the parent object
@@ -80,7 +80,7 @@ class SuperSimpleInstagramWidget extends WP_Widget {
      * @return array|mixed|null Decoded json data as an array or null if something went wrong.
      */
     private function load_instagram_data( $username ) {
-        $response         = wp_remote_get( $this->instagram_url . $username, array(
+        $response = wp_remote_get( $this->instagram_url . $username, array(
             'sslverify' => false,
             'timeout'   => self::HTTP_TIMEOUT
         ));

@@ -2,10 +2,10 @@
     <ul>
         <?php
             if ( isset( $data ) && is_array( $data ) ) {
-                foreach( $data['entry_data']['UserProfile'][0]['userMedia'] as $index => $image ) {
-                    $standard_image_url = $image['images']['standard_resolution']['url'];
-                    $caption            = $image['caption']['text'];
-                    $link               = $image['link'];
+                foreach( $data['entry_data']['ProfilePage'][0]['user']['media']['nodes'] as $index => $image ) {
+                    $standard_image_url = $image['display_src'];
+                    $caption            = $image['caption'];
+                    $link               = $this->instagram_url .'p/'. $image['code'];
                     ?>
                     <li>
                         <a href="<?php echo $link; ?>">
